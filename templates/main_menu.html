@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main menu</title>
+    <style>
+        h2 {
+            color: #4CAF50;
+            font-family: 'Arial';
+        }
+
+        body {
+            text-align: center;
+            padding: 20px;
+            font-family: 'Arial';
+            background-color: #f8f9fa;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px #999;
+        }
+
+        .btn:hover {background-color: #45a049}
+
+        .btn:active {
+            background-color: #3e8e41;
+            box-shadow: 0 2px #666;
+            transform: translateY(4px);
+        }
+
+        img {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 350px;
+        }
+
+    </style>
+</head>
+<body>
+<center>
+    <h2>Интернет-версия супермаркета</h2>
+    <img src="https://img.committed-to-kids.com/img/homepage/924/6-surprisingly-bad-things-that-happen-when-you-overeat-two-days-row.jpg"
+         height="300px" width="350px">
+    <br><br>
+    <a class="btn" href="{{url_for('bp_query.query_index')}}">Найти товары</a>
+</center>
+</body>
+</html>

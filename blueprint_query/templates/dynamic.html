@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dymanic_page</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        h2 {
+            color: #4CAF50;
+            font-size: 24px;
+        }
+
+        table {
+            width: 70%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .tab_title {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 16px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h2>{{prod_title}}</h2>
+    <table>
+        <tr class="tab_title">
+            <th>Категория</th>
+            <th>Название</th>
+            <th>Единица веса (грамм)</th>
+            <th>Цена</th>
+        </tr>
+        {% for product in products %}
+        <tr>
+            <td>{{product['category']}}</td>
+            <td>{{product['product_name']}}</td>
+            <td>{{product['product_measure']}}</td>
+            <td>{{product['price']}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a class="button" href="{{url_for('main_menu')}}">Возврат в главное меню</a>
+    <a class="button" href="{{url_for('bp_query.query_index')}}">Найти еще товары</a>
+</center>
+</body>
+</html>
